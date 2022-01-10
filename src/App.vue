@@ -1,17 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Gsap msg="GSAP Sandbox" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Gsap from "./components/Gsap.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Gsap,
+  },
+};
 </script>
 
 <style>
