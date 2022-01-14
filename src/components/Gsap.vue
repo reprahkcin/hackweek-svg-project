@@ -428,6 +428,7 @@ export default {
         opacity: 0.3,
         //move up
         y: -100,
+        ease: "power2.inOut",
       });
     },
     condense() {
@@ -435,17 +436,21 @@ export default {
         ".cloud",
         {
           duration: 1,
+          ease: "power2.inOut",
           scale: 0,
+          x: 0,
         },
         {
           scale: 1,
           opacity: 0.3,
+          //x: -100,
         }
       );
     },
     precipitate() {
       gsap.to(".raindrop", {
         duration: 1,
+        ease: "power2.inOut",
         x: 100,
         y: 100,
         opacity: 0.3,
@@ -456,6 +461,7 @@ export default {
         ".ground-arrow",
         {
           duration: 1,
+          ease: "power2.inOut",
           x: 1000,
           opacity: 0,
         },
