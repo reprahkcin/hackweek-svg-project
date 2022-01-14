@@ -426,7 +426,7 @@ export default {
       gsap.to(".evaporation-arrow", {
         duration: 1,
         opacity: 0.3,
-        //move up
+
         y: -100,
         ease: "power2.inOut",
       });
@@ -443,7 +443,6 @@ export default {
         {
           scale: 1,
           opacity: 0.3,
-          //x: -100,
         }
       );
     },
