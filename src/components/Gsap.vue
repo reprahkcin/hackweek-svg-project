@@ -393,7 +393,7 @@
           <g id="ground">
             <rect class="cls-4" width="1320" height="358" />
           </g>
-          <g id="ground-arrow" class="cls-5">
+          <g id="ground-arrow" class="ground-arrow">
             <polygon
               class="cls-3"
               points="1155.17 94 302.7 94 302.7 75.74 199.47 179 302.7 282.26 302.7 264 1155.17 264 1155.17 94"
@@ -425,7 +425,7 @@ export default {
     evaporate() {
       gsap.to(".evaporation-arrow", {
         duration: 1,
-        opacity: 0,
+        opacity: 0.3,
         //move up
         y: -100,
       });
@@ -439,6 +439,7 @@ export default {
         },
         {
           scale: 1,
+          opacity: 0.3,
         }
       );
     },
@@ -447,9 +448,23 @@ export default {
         duration: 1,
         x: 100,
         y: 100,
+        opacity: 0.3,
       });
     },
-    collect() {},
+    collect() {
+      gsap.fromTo(
+        ".ground-arrow",
+        {
+          duration: 1,
+          x: 1000,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 0.3,
+        }
+      );
+    },
   },
 
   setup() {
@@ -487,7 +502,7 @@ export default {
 }
 
 .cloud {
-  opacity: 0.3;
+  opacity: 0;
   fill: #fff;
 }
 
@@ -497,12 +512,17 @@ export default {
 
 .evaporation-arrow {
   fill: #fff;
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .raindrop {
   fill: #fff;
-  opacity: 0.3;
+  opacity: 0;
+}
+
+.ground-arrow {
+  fill: #fff;
+  opacity: 0;
 }
 
 .cls-4 {
